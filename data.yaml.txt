@@ -11,7 +11,7 @@ visit_scroll: n
 
 keyword: 
 vote: y
-document_url: 
+document_url: Ooo
 # -----------------
 
 center401: jjjEye272

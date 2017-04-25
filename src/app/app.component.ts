@@ -26,27 +26,22 @@ export class AppComponent {
     console.log('c', ipcRenderer);
     // Check if nodeJs childProcess is correctly injected (see externals in webpack.config.js)
     console.log('c', childProcess);
-<<<<<<< HEAD
     var str  = '';
     try {
       fs.readFileSync('./data.yaml').toString();
     } catch ( e ) {
     }
-=======
-    var str  = fs.readFileSync( data_yml ).toString();
->>>>>>> f93ba863c883725159fc773f66433dfa3be06c96
     console.log(str);
     // Get document, or throw exception on error
     if ( str ) {
-
-    try {  
-    var arr  = str.split( separator );
-        this.data['config'] = yaml.load( arr[1] );
-        this.data['search'] = yaml.load( arr[2] );
-        this.data['user'] = arr[3];
-    } catch (e) {
-        console.log(e);
-    }
+      try {  
+      var arr  = str.split( separator );
+          this.data['config'] = yaml.load( arr[1] );
+          this.data['search'] = yaml.load( arr[2] );
+          this.data['user'] = arr[3];
+      } catch (e) {
+          console.log(e);
+      }
     }
 
     
