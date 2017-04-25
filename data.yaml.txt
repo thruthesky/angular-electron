@@ -1,21 +1,19 @@
 
 # -----------------
 
-browser: n
+browser: y
 ip_change: n
-visit_naver_main: n
+visit_naver_main: y
 click_pause: 1
 show_devtool: n
-visit_scroll: n
+vote_scroll: y
 # -----------------
 
-keyword: 
-vote: y
-document_url: 
+keyword: ionic
+vote: n
+document_url: http://kin.naver.com/qna/detail.nhn?d1id=11&dirId=1115&docId=58084069&qb=aW9uaWM=&enc=utf8&section=kin&rank=3&search_sort=0&spq=0
 # -----------------
-
 center401: jjjEye272
 cai_8813: cai_111388
-louine01teacher99: one_01htlou
 abcdef: 1234
-
+catchme9876: ontue4ever
