@@ -2,15 +2,165 @@
   네이버 공감 설정 프로그램
 </h1>
 
+
 <table>
+
+
+
+
   <tr>
-    <td><label>공감 선택</label></td>
+    <td><div class="caption">지식인 글 URL</div></td>
     <td>
       <div class="text">
-        <input type="radio" name="vote"> 공감
-        <input type="radio" name="vote"> 비공감
+        <label><input type="text" name="document_url" [(ngModel)]="data.search.document_url"></label>
       </div>
     </td>
   </tr>
+
+
+  <tr>
+    <td><div class="caption">공감 선택</div></td>
+    <td>
+      <div class="text">
+        <label><input type="radio" name="vote" value="y" [(ngModel)]="data.search.vote"> 공감</label>
+        <label><input type="radio" name="vote" value="n" [(ngModel)]="data.search.vote"> 비공감</label>
+      </div>
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td><div class="caption">검색 할 키워드</div></td>
+    <td>
+      <div class="text">
+        <label><input type="text" name="keyword" [(ngModel)]="data.search.keyword"></label>
+        공백으로 놔 두면 검색하지 않음.
+      </div>
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td></td>
+    <td>
+      <div class="text">
+        <button type="button" (click)="onClickSave()">저장</button>
+      </div>
+    </td>
+  </tr>
+  
+
+
+
+  <tr>
+    <td><div class="caption">웹 브라우저 열기</div></td>
+    <td>
+      <div class="text">
+        <label><input type="radio" name="browser" value="y" [(ngModel)]="data.config.browser"> 예</label>
+        <label><input type="radio" name="browser" value="n" [(ngModel)]="data.config.browser"> 아니오</label>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td><div class="caption">IP 변경</div></td>
+    <td>
+      <div class="text">
+        <label><input type="radio" name="ip_change" value="y" [(ngModel)]="data.config.ip_change"> 예</label>
+        <label><input type="radio" name="ip_change" value="n" [(ngModel)]="data.config.ip_change"> 아니오</label>
+      </div>
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td><div class="caption">네이버 메인 페이지 방문</div></td>
+    <td>
+      <div class="text">
+        <label><input type="radio" name="visit_naver_main" value="y" [(ngModel)]="data.config.visit_naver_main"> 예</label>
+        <label><input type="radio" name="visit_naver_main" value="n" [(ngModel)]="data.config.visit_naver_main"> 아니오</label>
+      </div>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td><div class="caption">클릭 / 페이지 이동 후 쉬는 시간</div></td>
+    <td>
+      <div class="text">
+        <label><input type="text" name="click_pause" [(ngModel)]="data.config.click_pause"> (초)</label>
+      </div>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td><div class="caption">공감 아이콘으로 스크롤</div></td>
+    <td>
+      <div class="text">
+        <label><input type="radio" name="vote_scroll" value="y" [(ngModel)]="data.config.vote_scroll"> 예</label>
+        <label><input type="radio" name="vote_scroll" value="n" [(ngModel)]="data.config.vote_scroll"> 아니오</label>
+      </div>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td><div class="caption">개발자 툴 표시</div></td>
+    <td>
+      <div class="text">
+        <label><input type="radio" name="show_devtool" value="y" [(ngModel)]="data.config.show_devtool"> 예</label>
+        <label><input type="radio" name="show_devtool" value="n" [(ngModel)]="data.config.show_devtool"> 아니오</label>
+      </div>
+    </td>
+  </tr>
+
+
+
+
+  <tr>
+    <td></td>
+    <td>
+      <div class="text">
+        <button type="button" (click)="onClickSave()">저장</button>
+      </div>
+    </td>
+  </tr>
+
+
+  <tr valign=top>
+    <td>
+      <div class="caption">네이버 아이디와 비밀번호
+      각 라인에 아이디와 비밀번호를 기록. 아이디와 콜론(:)을 붙여서 기록. 콜론 다음에 공백 하나, 그리고 비밀번호 입력<br>
+      <br>
+      형식) 아이디: 비밀번호를<br>
+      예제)<br><br>
+      id: password<br>
+      abcdef: 1234a!bcd
+      </div>
+    </td>
+    <td>
+      <div class="text">
+        <textarea name="users" [(ngModel)]="data.user"></textarea>
+      </div>
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td></td>
+    <td>
+      <div class="text">
+        <button type="button" (click)="onClickSave()">저장</button>
+      </div>
+    </td>
+  </tr>
+
+  
+
 </table>
 

@@ -1,0 +1,19 @@
+
+# -----------------
+
+browser: y
+ip_change: n
+visit_naver_main: n
+click_pause: 3
+show_devtool: n
+vote_scroll: y
+# -----------------
+
+keyword: 필리핀
+vote: n
+document_url: http://kin.naver.com/qna/detail.nhn?d1id=11&dirId=1115&docId=1733892873&qb=aW9uaWM=&enc=utf8&section=kin&rank=2&search_sort=0&spq=0
+# -----------------
+center401: jjjEye272
+cai_8813: cai_111388
+louine01teacher99: one_01htlou
+abcdef: 1234a

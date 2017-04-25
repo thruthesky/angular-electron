@@ -19,7 +19,9 @@ module.exports = {
   "devtool": "source-map",
   "externals": {
     "child_process": 'require(\'child_process\')',
-    "electron": 'require(\'electron\')'
+    "electron": 'require(\'electron\')',
+    "fs": 'require(\'fs\')',
+    "yaml": 'require(\'js-yaml\')'
   },
   "resolve": {
     "extensions": [
