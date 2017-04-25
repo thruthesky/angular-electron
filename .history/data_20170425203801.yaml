@@ -7,9 +7,12 @@ visit_naver_main: n
 click_pause: 1
 show_devtool: n
 visit_scroll: n
-# -----------------
-
-keyword: 
 vote: y
 document_url: 
+user: 
 # -----------------
+
+vote: y
+keyword: 
+# -----------------
+undefined

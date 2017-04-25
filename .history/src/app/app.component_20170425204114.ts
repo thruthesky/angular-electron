@@ -17,7 +17,7 @@ export class AppComponent {
   data = {
     config: {},
     search: {},
-    user: ''
+    user: {}
   };
   
   constructor() {
@@ -53,9 +53,9 @@ export class AppComponent {
         this.data.config['show_devtool'] = 'n';
         this.data.config['visit_scroll'] = 'n';
         this.data.search['keyword'] = '';
-        this.data.search['vote'] = 'y';
-        this.data.search['document_url'] = '';
-        this.data.user = '';
+        this.data.config['vote'] = 'y';
+        this.data.config['document_url'] = '';
+        this.data.config['user'] = '';
         
         console.log( 'Naver vote data:', this.data);
   }

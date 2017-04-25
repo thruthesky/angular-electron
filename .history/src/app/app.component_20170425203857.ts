@@ -17,7 +17,7 @@ export class AppComponent {
   data = {
     config: {},
     search: {},
-    user: ''
+    user: {}
   };
   
   constructor() {
@@ -31,21 +31,16 @@ export class AppComponent {
     } catch ( e ) {
     }
     console.log(str);
-    // Get document, or throw exception on error
-    if ( str ) {
-
-    try {  
     var arr  = str.split( separator );
+    // Get document, or throw exception on error
+    try {
         this.data['config'] = yaml.load( arr[1] );
         this.data['search'] = yaml.load( arr[2] );
         this.data['user'] = arr[3];
-    } catch (e) {
-        console.log(e);
-    }
-    }
+        console.log( 'Naver vote data:', this.data);
 
-    
         // default values
+
         this.data.config['browser'] = 'n';
         this.data.config['ip_change'] = 'n';
         this.data.config['visit_naver_main'] = 'n';
@@ -53,11 +48,13 @@ export class AppComponent {
         this.data.config['show_devtool'] = 'n';
         this.data.config['visit_scroll'] = 'n';
         this.data.search['keyword'] = '';
-        this.data.search['vote'] = 'y';
-        this.data.search['document_url'] = '';
-        this.data.user = '';
+        this.data.config['vote'] = 'y';
+        this.data.config['document_url'] = '';
+        this.data.config['user'] = '';
         
-        console.log( 'Naver vote data:', this.data);
+    } catch (e) {
+        console.log(e);
+    }
   }
 
   onClickSave() {
