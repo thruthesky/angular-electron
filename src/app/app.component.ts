@@ -28,7 +28,7 @@ export class AppComponent {
     console.log('c', childProcess);
     var str  = '';
     try {
-      str = fs.readFileSync('./data.yaml').toString();
+      str = fs.readFileSync( data_yml ).toString();
       console.log("str: ", str);
     } catch ( e ) {
     }
@@ -36,10 +36,11 @@ export class AppComponent {
     // Get document, or throw exception on error
     if ( str ) {
       try {  
-      var arr  = str.split( separator );
-          this.data['config'] = yaml.load( arr[1] );
-          this.data['search'] = yaml.load( arr[2] );
-          this.data['user'] = arr[3];
+        var arr  = str.split( separator.trim() );
+        console.log("parts of yaml: ", arr);
+        this.data['config'] = yaml.load( arr[1] );
+        this.data['search'] = yaml.load( arr[2] );
+        this.data['user'] = arr[3];
       } catch (e) {
           console.log(e);
       }
@@ -48,6 +49,7 @@ export class AppComponent {
     console.log("data: ", this.data);
     
         // default values
+
       if ( this.data.config['browser'] === void 0 ) this.data.config['browser'] = 'n';
       if ( this.data.config['ip_change'] === void 0 )   this.data.config['ip_change'] = 'n';
       if ( this.data.config['visit_naver_main'] === void 0 )   this.data.config['visit_naver_main'] = 'n';
