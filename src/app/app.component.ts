@@ -6,6 +6,7 @@ import * as fs from 'fs';
 import * as yaml from 'js-yaml';
 
 const separator = "\n# -----------------\n";
+const data_yml = "./data.yaml.txt";
 
 @Component({
   selector: 'app-root',
@@ -25,11 +26,15 @@ export class AppComponent {
     console.log('c', ipcRenderer);
     // Check if nodeJs childProcess is correctly injected (see externals in webpack.config.js)
     console.log('c', childProcess);
+<<<<<<< HEAD
     var str  = '';
     try {
       fs.readFileSync('./data.yaml').toString();
     } catch ( e ) {
     }
+=======
+    var str  = fs.readFileSync( data_yml ).toString();
+>>>>>>> f93ba863c883725159fc773f66433dfa3be06c96
     console.log(str);
     // Get document, or throw exception on error
     if ( str ) {
@@ -68,7 +73,7 @@ export class AppComponent {
     let data = config + search + user;
 
     console.log("data: ", data);
-    fs.writeFileSync( "./data.yaml", data );
+    fs.writeFileSync( data_yml, data );
 
   }
 }
