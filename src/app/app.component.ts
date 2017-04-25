@@ -28,7 +28,8 @@ export class AppComponent {
     console.log('c', childProcess);
     var str  = '';
     try {
-      fs.readFileSync('./data.yaml').toString();
+      str = fs.readFileSync('./data.yaml').toString();
+      console.log("str: ", str);
     } catch ( e ) {
     }
     console.log(str);
@@ -44,18 +45,19 @@ export class AppComponent {
       }
     }
 
+    console.log("data: ", this.data);
     
         // default values
-        this.data.config['browser'] = 'n';
-        this.data.config['ip_change'] = 'n';
-        this.data.config['visit_naver_main'] = 'n';
-        this.data.config['click_pause'] = '1';
-        this.data.config['show_devtool'] = 'n';
-        this.data.config['visit_scroll'] = 'n';
-        this.data.search['keyword'] = '';
-        this.data.search['vote'] = 'y';
-        this.data.search['document_url'] = '';
-        this.data.user = '';
+      if ( this.data.config['browser'] === void 0 ) this.data.config['browser'] = 'n';
+      if ( this.data.config['ip_change'] === void 0 )   this.data.config['ip_change'] = 'n';
+      if ( this.data.config['visit_naver_main'] === void 0 )   this.data.config['visit_naver_main'] = 'n';
+      if ( this.data.config['click_pause'] === void 0 )   this.data.config['click_pause'] = '1';
+      if ( this.data.config['show_devtool'] === void 0 )   this.data.config['show_devtool'] = 'n';
+      if ( this.data.config['visit_scroll'] === void 0 )   this.data.config['visit_scroll'] = 'n';
+      if ( this.data.search['keyword'] === void 0 )   this.data.search['keyword'] = '';
+      if ( this.data.search['vote'] === void 0 )   this.data.search['vote'] = 'y';
+      if ( this.data.search['document_url'] === void 0 )   this.data.search['document_url'] = '';
+      if ( this.data.user === void 0 )   this.data.user = '';
         
         console.log( 'Naver vote data:', this.data);
   }
